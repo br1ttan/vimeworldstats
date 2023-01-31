@@ -1,0 +1,32 @@
+<div class="card">
+    <ul>
+        <li class="list-item">
+            <span>Рівень:</span>
+            <span class="green">{{ player.level }}</span>
+        </li>
+        <li class="list-item">
+            <span>ID:</span>
+            <span class="green">{{ player.id }}</span>
+        </li>
+        <li class="list-item">
+            <span>Статус:</span>
+            <span [ngClass]="{
+                online: session.online.value,
+                offline: !session.online.value
+            }">{{ session.online.value | toStatus }}
+            </span>
+        </li>
+        <li class="list-item">
+            <span>Друзів:</span>
+            <span class="green">{{ friends.length }}</span>
+        </li>
+        <li class="list-item">
+            <span>Ачивок:</span>
+            <span class="green">1337</span>
+        </li>
+        <li class="list-item">
+            <span>В гільдії:</span>
+            <span>{{ player.guild?.name }}</span>
+        </li>
+    </ul>
+</div>

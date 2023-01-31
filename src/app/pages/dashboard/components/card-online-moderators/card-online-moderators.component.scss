@@ -1,0 +1,20 @@
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    width: 280px;
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 0 0 0;
+}
+
+.moderators-list {
+    display: flex;
+    gap: 5px;
+}
+
+.moderator {
+    cursor: pointer;
+}

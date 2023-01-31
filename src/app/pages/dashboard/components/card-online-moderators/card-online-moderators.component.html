@@ -1,0 +1,25 @@
+<div class="card">
+    <h3 class="title">Онлайн модератори</h3>
+    <div class="moderators-list" *ngIf="data$ | async as data; else loadingTemplate">
+        <ng-container *ngIf="data.length; else emptyTemplate">
+            <minecraft-head 
+                class="moderator" 
+                *ngFor="let moderator of data;" 
+                [routerLink]="getRouterLink(moderator.username)" 
+                [height]="headHeigth"
+                [width]="headWidth" 
+                [playerNickname]="moderator.username"
+                [transform]="headTransformOptions">
+            </minecraft-head>
+        </ng-container>
+    </div>
+    <ng-template #loadingTemplate>
+        <p>loading...</p>
+    </ng-template>
+
+    <ng-template #emptyTemplate>
+        <div class="empty-img">
+            <mat-icon fontIcon="bed"></mat-icon>
+        </div>
+    </ng-template>
+</div>

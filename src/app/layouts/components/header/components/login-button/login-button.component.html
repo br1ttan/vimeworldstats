@@ -1,0 +1,19 @@
+<ng-template #login>
+    <a routerLink="login" class="login-btn btn">Увійти</a>
+</ng-template>
+
+<ng-container *ngIf="authenticatedUser$ | async as authenticatedUser; else login">
+  <button mat-button 
+  [matMenuTriggerFor]="menu">Мій профіль</button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item="0" 
+    (click)="onProfileNavigateButtonClick(authenticatedUser)">Мій профіль</button>
+    
+    <button mat-menu-item="1" 
+    routerLink="edit">Редагувати</button>
+    
+    <button mat-menu-item="2" 
+    (click)="onLogoutButtonClick()">Вийти</button>
+  </mat-menu>
+</ng-container>

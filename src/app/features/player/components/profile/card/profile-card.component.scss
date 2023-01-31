@@ -1,0 +1,40 @@
+.card {
+    min-height: 200px;
+    max-width: 300px;
+    width: 240px;
+    border-radius: 15px;
+    background-color: var(--card-background-color);
+}
+
+.list-item {
+    color: #9E9E9E;
+    padding: 15px 15px;
+    align-items: baseline;
+    font-size: 15px;
+    gap: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-right: 0;
+    border-left: 0;
+    display: flex;
+
+    &:first-child {
+        border-top: 0;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    &:hover {
+        background-color: #eee;
+        transition: all 0.3s;
+    }
+}
+
+.online {
+    color: green;
+}
+
+.offline {
+    color: red;
+}

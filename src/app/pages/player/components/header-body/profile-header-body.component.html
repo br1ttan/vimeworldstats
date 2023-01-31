@@ -1,0 +1,17 @@
+<div class="profile-header-body">
+    <minecraft-head
+    [width]="headWidth"
+    [height]="headHeight"
+    [transform]="headTransformOptions"
+    [playerNickname]="player.username"
+    >
+    </minecraft-head>
+    <div class="info">
+        <h6 class="profile-header-pretitle">
+            {{ player.rank }}
+        </h6>
+        <h2 class="profile-header-title">
+            {{ player.username }}
+        </h2>
+    </div>
+</div>

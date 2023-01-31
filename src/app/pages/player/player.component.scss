@@ -1,0 +1,19 @@
+:host {
+    color: #324148;
+}
+
+.main {
+    display: flex;
+    padding: 15px 15px;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+mat-tab-group {
+    width: 70%;
+}
+
+:host ::ng-deep .mat-tab-labels {
+    display: flex !important;
+    justify-content: center !important;
+}

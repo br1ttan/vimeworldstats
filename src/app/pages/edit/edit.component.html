@@ -1,0 +1,9 @@
+<div *ngIf="authenticatedUser$ | async" class="edit">
+    <div class="banner-main">
+        <div 
+        #bannerElement
+        banner 
+        class="banner"></div>
+        <file-input (imageUrl)="setImageUrl($event)"></file-input>
+    </div>
+</div>

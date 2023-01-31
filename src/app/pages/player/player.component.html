@@ -1,0 +1,41 @@
+<ng-container 
+    *ngIf="data$ | async as data; else loadingTemplate" 
+    class="player">
+
+    <profile-banner>
+    </profile-banner>
+
+    <profile-header-body [player]="data.friends.user">
+    </profile-header-body>
+
+    <div class="main">
+        <div class="side-left">
+            <profile-card 
+            [friends]="data.friends.friends" 
+            [player]="data.friends.user"
+            [session]="data.status">
+            </profile-card>
+        </div>
+
+        <mat-tab-group animationDuration="0ms">
+            <mat-tab label="Статистика">
+                <profile-statistic [data]="data.stats">
+                </profile-statistic>
+            </mat-tab>
+
+            <mat-tab label="Друзі">
+                <profile-friends [data]="data.friends">
+                </profile-friends>
+            </mat-tab>
+
+            <mat-tab label="Матчі">
+                <profile-matches [data]="data.matchesList">
+                </profile-matches>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</ng-container>
+
+<ng-template #loadingTemplate>
+    <p>loading...</p>
+</ng-template>

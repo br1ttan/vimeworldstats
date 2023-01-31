@@ -1,0 +1,13 @@
+:host {
+    width: 100%;
+    .banner {
+        height: 400px;
+        max-height: 400px;
+        width: 100%;
+        background-color: pink;
+        border-radius: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+}

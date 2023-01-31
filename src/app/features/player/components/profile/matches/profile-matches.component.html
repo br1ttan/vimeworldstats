@@ -1,0 +1,19 @@
+<div class="matches">
+    <h2 class="title">Список останніх матчів</h2>
+    <div *ngIf="data; else empty" class="matches__cards">
+        <div *ngFor="let match of data.matches" class="matches__card">
+            <div class="matches__card-title">
+                <h3 class="matches__card-title__name"> {{ match.game }} </h3>
+                <p class="matches__card-title__status"> {{ match.win | WinOrLose }} </p>
+            </div>
+            <div class="matches__card-info">
+                <p class="card-info-duration">Тривалість: <span> {{ match.duration }} </span></p>
+                <p *ngIf="match.map" class="card-info-map">Карта: <span> {{ match.map.name }} </span></p>
+                <p class="card-info-player">Гравців: <span> {{ match.players }} </span></p>
+            </div>
+        </div>
+    </div>
+    <ng-template #empty>
+        <h3>Вибачте, але тут пусто</h3>
+    </ng-template>
+</div>

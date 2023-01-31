@@ -1,0 +1,46 @@
+.profile-header-body {
+    padding: 15px 15px 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+}
+
+.profile-header-pretitle {
+    font-size: 19px;
+}
+
+.profile-header-title {
+    font-size: 34px;
+}
+
+.vimeskin {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+    margin: 6px;
+    text-align: left;
+}
+
+.vimeskin > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.vimeskin > div {
+    background-position: -40px -8px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    transform: translateX(56px) translateY(56px) scale(17.75);
+
+}

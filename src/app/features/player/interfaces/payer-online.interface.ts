@@ -1,0 +1,26 @@
+export interface IOnline {
+    readonly total: number,
+    readonly separated: {
+        readonly ann: number,
+        readonly bb: number,
+        readonly gg: number,
+        readonly lobby: number,
+        readonly sw: number,
+        readonly bw: number,
+        readonly mw: number,
+        readonly kpvp: number,
+        readonly dr: number,
+        readonly bp: number,
+        readonly hg: number,
+        readonly prison: number,
+        readonly luckywars: number,
+        readonly eggwars: number,
+        readonly murder: number,
+        readonly duels: number,
+        readonly speedbuilders: number,
+        readonly tntrun: number,
+        readonly bridge: number,
+        readonly jumpleague: number,
+        readonly hide: number,
+    }
+}

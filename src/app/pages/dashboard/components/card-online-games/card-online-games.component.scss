@@ -1,0 +1,42 @@
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    width: 280px;
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 0 0 0;
+    height: 706px;
+}
+
+.card-info {
+    height: 30px;
+    max-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.green {
+    color: green;
+}
+
+.loading {
+    font-size: 20px;
+    writing-mode: vertical-lr;
+    text-orientation:upright;
+}

@@ -1,0 +1,32 @@
+<div class="input">
+    <form>
+        <div 
+        (click)="onSelectButtonClick()" 
+        #htmlDivElement 
+        class="truncate-input">Вибрати зображення</div>
+        
+        <div>
+            <input 
+            (change)="onFileInputChange($event, fileInput, htmlDivElement)"
+            class="file-input" 
+            #fileInput 
+            type="file" 
+            accept=".jpg,.jpeg,.gif,.bmp,.png">
+
+            <button 
+            *ngIf="isSaveButtonDisabled; 
+            else saveButton" 
+            (click)="onSelectButtonClick()" 
+            class="btn-select">Вибрати</button>
+        </div>
+        
+        <button 
+        *ngIf="isSaveButtonDisabled"
+        (click)="onDeleteButtonClick()"
+        class="btn-delete">Видалити шапку</button>
+    </form>
+
+<ng-template #saveButton>
+    <button (click)="onSaveButtonClick()" 
+    class="btn-select btn-save">Зберегти</button>
+</ng-template>

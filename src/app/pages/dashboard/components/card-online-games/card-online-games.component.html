@@ -1,0 +1,26 @@
+<div class="card">
+    <h2 class="title">
+        Онлайн
+    </h2>
+    <ng-container *ngIf="data && dataTottalyOnline; else loadingTemplate">
+        <div 
+        *ngFor="let game of data"
+         class="card-info">
+            <h3>
+                {{ game.gameName }}: 
+            </h3>
+            <p class="green">
+                 {{ game.gameOnline }}
+            </p>
+        </div>
+        <div class="total">
+            <h2 class="title">Повний онлайн: </h2>
+            <p class="green">
+                {{ dataTottalyOnline }}
+            </p>
+        </div>
+    </ng-container>
+    <ng-template #loadingTemplate>
+        <p class="loading">loading...</p>
+    </ng-template>
+</div>

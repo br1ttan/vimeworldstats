@@ -1,0 +1,18 @@
+<div class="friends">
+    <div *ngIf="isData" class="friends__cards">
+        <div *ngFor="let friend of data.friends" class="friends__card">
+            <div class="friends__player">
+                <minecraft-head
+                [width]="headWidth"
+                [height]="headHeight"
+                [transform]="headTransformOptions"
+                [playerNickname]="friend.username">
+                </minecraft-head>
+                <h3 class="friends__card-title">
+                    <a (click)="onProfileNavigateButtonClick(friend.username)">
+                        {{ friend.username }} 
+                    </a>
+                </h3>
+            </div>
+        </div>
+</div>

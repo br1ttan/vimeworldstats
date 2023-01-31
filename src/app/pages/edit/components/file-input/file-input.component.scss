@@ -1,0 +1,42 @@
+:host {
+    form {
+        display: flex;
+    }
+    
+    .truncate-input {
+        padding: 8px;
+        border: 1px solid grey;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        width: 75%;
+    }
+
+    .btn-select {
+        display: block;
+        padding: 10px;
+        height: 100%;
+        background-color: var(--header-color);
+        color: var(--text-color);
+    }
+    
+    .btn-save {
+        background-color: lightgreen;
+    }
+    
+    .btn-delete {
+        padding: 8px;
+        background-color: red;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    input[type='file'] {
+        opacity:0;
+        display: none;
+    }
+    
+    button {
+        outline: none;
+        border: none;
+    }
+}

@@ -1,0 +1,11 @@
+<button mat-mini-fab [matMenuTriggerFor]="menu">
+    <mat-icon>inbox_customize</mat-icon>
+</button>
+  <mat-menu #menu="matMenu">
+    <button 
+    *ngFor="let theme of themeArray"
+    (click)="onThemeButtonClick(theme)" 
+    mat-menu-item>
+        {{ theme.name }}
+    </button>
+  </mat-menu>

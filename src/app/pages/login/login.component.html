@@ -1,0 +1,18 @@
+<div class="login">
+    <form
+    [formGroup]="form"
+    (ngSubmit)="onFormSubmit()" 
+    class="card"
+     >
+        <h2 class="title">Увійти</h2>
+        <div class="form__control">
+            <input formControlName="token" type="text" placeholder="Ввести токен">
+            <button
+            [disabled]="form.invalid || isSubmitted"
+            class="btn btn-primary"
+            type="submit"
+            >
+            Підтвердити</button>
+        </div>
+    </form>
+</div>
